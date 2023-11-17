@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [credentials, setCredentials] = useState({ email: '', password: '' });
+  const [credentials, setCredentials] = useState({ email: "", password: "" });
   let navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -20,7 +20,9 @@ const Login = () => {
         <div className="col-md-6">
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
-              <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+              <label htmlFor="exampleInputEmail1" className="form-label">
+                Email address
+              </label>
               <input
                 type="email"
                 className="form-control"
@@ -31,10 +33,14 @@ const Login = () => {
                 aria-describedby="emailHelp"
                 required
               />
-              <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+              <div id="emailHelp" className="form-text">
+                We'll never share your email with anyone else.
+              </div>
             </div>
             <div className="mb-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+              <label htmlFor="exampleInputPassword1" className="form-label">
+                Password
+              </label>
               <input
                 type="password"
                 className="form-control"
@@ -46,8 +52,12 @@ const Login = () => {
               />
             </div>
 
-            <button type="submit" className="btn btn-primary">Login</button>
-            <Link to="/createuser" className="btn btn-secondary ms-2">New User? Create Account</Link>
+            <button type="submit" className="btn btn-primary">
+              Login
+            </button>
+            <Link to="/CreateUser" className="btn btn-secondary ms-2">
+              New User? Create Account
+            </Link>
           </form>
         </div>
       </div>
